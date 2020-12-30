@@ -3,6 +3,7 @@ import 'package:managing_home_v004/screens/add_categories/add_categories_screen.
 import 'package:managing_home_v004/screens/forget_password/forget_password_screen.dart';
 import 'package:managing_home_v004/screens/home/home_screen.dart';
 import 'package:managing_home_v004/screens/login/login_screen.dart';
+import 'package:managing_home_v004/screens/profile/profile_screen.dart';
 import 'package:managing_home_v004/screens/sign_in/sign_in_screen.dart';
 import 'package:managing_home_v004/screens/sign_up/sign_up_screen.dart';
 import 'package:managing_home_v004/screens/splash/splash_screen.dart';
@@ -18,6 +19,7 @@ final Map<String, WidgetBuilder> routes = {
   HomeScreen.routeName: (context) => HomeScreen(),
   AddCategoriesScreen.routeName: (context) => AddCategoriesScreen(),
   LoginScreen.routeName: (context) => LoginScreen(),
+  ProfileScreen.routeName: (context) => ProfileScreen(),
 };
 
 // class AppRoutes {

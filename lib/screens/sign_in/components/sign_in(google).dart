@@ -8,6 +8,10 @@ final GoogleSignIn googleSignIn = GoogleSignIn();
 Future<String> signInWithGoogle() async {
   await Firebase.initializeApp();
 
+  String name;
+  String email;
+  String imageUrl;
+
   final GoogleSignInAccount googleSignInAccount = await googleSignIn.signIn();
   final GoogleSignInAuthentication googleSignInAuthentication =
       await googleSignInAccount.authentication;
@@ -20,6 +24,14 @@ Future<String> signInWithGoogle() async {
   final UserCredential authResult =
       await _auth.signInWithCredential(credential);
   final User user = authResult.user;
+
+  assert(authResult.user.email != null);
+  assert(authResult.user.displayName != null);
+  assert(authResult.user.photoURL != null);
+
+  name = authResult.user.displayName;
+  email = authResult.user.email;
+  imageUrl = authResult.user.photoURL;
 
   if (user != null) {
     assert(!user.isAnonymous);

@@ -12,6 +12,8 @@ import 'package:managing_home_v004/screens/sign_up/sign_up_screen.dart';
 import '../../../size_config.dart';
 import '../../login/components/sign_form.dart';
 
+import 'package:provider/provider.dart';
+
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

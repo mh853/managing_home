@@ -1,18 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:managing_home_v004/components/already_have_login.dart';
-import 'package:managing_home_v004/components/social_card.dart';
-import 'package:managing_home_v004/constants.dart';
 import 'package:managing_home_v004/screens/home/home_screen.dart';
-import 'package:managing_home_v004/screens/login/login_screen.dart';
 import 'package:managing_home_v004/screens/sign_in/components/sign_in(google).dart';
-import 'package:managing_home_v004/screens/sign_in/components/social_auth.dart';
 import 'package:managing_home_v004/screens/sign_in/components/social_tap.dart';
 import 'package:managing_home_v004/screens/sign_up/sign_up_screen.dart';
 
 import '../../../size_config.dart';
-import '../../login/components/sign_form.dart';
-
-import 'package:provider/provider.dart';
 
 class Body extends StatelessWidget {
   @override

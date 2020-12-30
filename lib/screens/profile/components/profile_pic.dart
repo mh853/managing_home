@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../sign_in/components/sign_in(google).dart';
@@ -17,9 +18,9 @@ class ProfilePic extends StatelessWidget {
         overflow: Overflow.visible,
         children: [
           CircleAvatar(
-            backgroundImage: NetworkImage(
-              googleSignIn.currentUser.photoUrl,
-            ),
+            backgroundImage: (googleSignIn.currentUser.photoUrl == null)
+                ? null
+                : NetworkImage(googleSignIn.currentUser.photoUrl),
             radius: 60,
             backgroundColor: Colors.transparent,
             onBackgroundImageError: null,

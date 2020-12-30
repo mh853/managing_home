@@ -22,6 +22,7 @@ class ProfilePic extends StatelessWidget {
             ),
             radius: 60,
             backgroundColor: Colors.transparent,
+            onBackgroundImageError: null,
             // AssetImage("assets/images/Profile Image.png"),
           ),
           Positioned(

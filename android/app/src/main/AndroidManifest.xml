@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.managing_home_v004">
+    package="com.trich.managing_home_v004">
    <application
         android:label="managing_home_v004"
         android:icon="@mipmap/ic_launcher">

@@ -8,13 +8,7 @@ AppBar buildAppBar(BuildContext context,
   return AppBar(
     backgroundColor: isTransparent ? Colors.transparent : Colors.white,
     elevation: 0,
-    leading: IconButton(
-      icon: Icon(
-        Icons.menu,
-        color: kIconColor,
-      ),
-      onPressed: () {},
-    ),
+    leading: Icon(Icons.home),
     title: !isTransparent
         ? Text(
             isTransparent ? "" : title,

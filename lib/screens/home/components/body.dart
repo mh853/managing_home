@@ -24,7 +24,7 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   List<Category> items;
   FirestoreService fireServ = new FirestoreService();
-  StreamSubscription<QuerySnapshot> todoTasks;
+  StreamSubscription<QuerySnapshot> todoCategories;
 
   @override
   void initState() {
@@ -32,14 +32,15 @@ class _BodyState extends State<Body> {
 
     items = new List();
 
-    todoTasks?.cancel();
-    todoTasks = fireServ.getCategoryList().listen((QuerySnapshot snapshot) {
-      final List<Category> tasks = snapshot.docs
+    todoCategories?.cancel();
+    todoCategories =
+        fireServ.getCategoryList().listen((QuerySnapshot snapshot) {
+      final List<Category> categories = snapshot.docs
           .map((documentSnapshot) => Category.fromMap(documentSnapshot.data()))
           .toList();
 
       setState(() {
-        this.items = tasks;
+        this.items = categories;
       });
     });
   }
@@ -121,10 +122,10 @@ class _BodyState extends State<Body> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Color(0xFFFA7397),
+        backgroundColor: kPrimaryColor,
         child: Icon(
-          FontAwesomeIcons.listUl,
-          color: Color(0xFFFDDE42),
+          FontAwesomeIcons.plus,
+          color: Colors.white,
         ),
         onPressed: () {
           Navigator.push(
